@@ -132,9 +132,9 @@ class WithAnotherExperiment(Experiment):
     
 def _run_experiment(clf, x_train, y_train, x_test, y_test, y_test_real):
     uid = shortuuid.uuid()
-    print("[{}-{}] Launching".format(uid, dt.datetime.now()))
+    #print("[{}-{}] Launching".format(uid, dt.datetime.now()))
     rst = clf.experiment(x_train, y_train, x_test, y_test)
-    print("[{}-{}] Done".format(uid, dt.datetime.now()))
+    #print("[{}-{}] Done".format(uid, dt.datetime.now()))
     rst.update(
         y_testing=y_test,
         y_testing_real=y_test_real)

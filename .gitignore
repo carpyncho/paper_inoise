@@ -45,3 +45,4 @@ celerybeat-schedule
 .mypy_cache/
 data
 cache/
+*.pyc

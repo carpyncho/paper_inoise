@@ -66,6 +66,9 @@ class Experiment(object):
                 'thresh': thresholds,
                 'roc_auc': roc_auc,
                 'prec_rec_curve': prec_rec_curve,
+                'prec_rec': (
+                    metrics.precision_score(y_test, predictions),
+                    metrics.recall_score(y_test, predictions)),
                 'y_test': y_test,
                 'predictions': predictions,
                 'probabilities': probabilities,
@@ -181,6 +184,9 @@ class KFoldExperiment(Experiment):
             'thresh': thresholds,
             'roc_auc': roc_auc,
             'prec_rec_curve': prec_rec_curve,
+            'prec_rec': (
+                    metrics.precision_score(y_testing, predictions),
+                    metrics.recall_score(y_testing, predictions)),
             'y_test': y_testing,
             'y_test_real': y_testing_real,
             'predictions': predictions,
